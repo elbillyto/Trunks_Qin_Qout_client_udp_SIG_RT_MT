@@ -1,4 +1,4 @@
-![logo](maxcpp.png) C
+![logo](http://artificialreality.free.fr/images/POSIX-logo.jpg)
 ==========================
 
 ## Synopsis
