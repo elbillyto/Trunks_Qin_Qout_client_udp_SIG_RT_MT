@@ -17,7 +17,40 @@ The major part of the files belong to a codeblocks projec that serves the purpos
 
 ## Code Example
 
+  printf("--> runETHER %d\n", a->id);
 
+	for (o = 0; o < a->lock->Capacity; o++) {
+
+		//generates capacity
+
+		writelock(a->lock, a->id);
+		queueAdd(fifoOUT, o + 1);
+		printf("ETHER %d: Wrote %d\n", a->id, o + 1);
+		writeunlock(a->lock);
+
+	}
+
+	//ETHER has generated the entire output, Notify
+	printf("ETHER %d: Finishing generation...\n", a->id);
+	printf("ETHER %d: Finished generation.\n", a->id);
+
+	//reads qIN until Capacity to process results from TRUNKS
+	for (i = 0; i < a->lock->Capacity; i++) {
+
+		//reads capacity
+
+		readlock(a->lock, a->id);
+		queueDel(fifoIN, &d);
+		printf("ETHER %d: read %d\n", a->id, d);
+		readunlock(a->lock);
+		sig_send(SIGRTMIN_1, d);
+	}
+
+	//ETHER has consumed the entire input, Notify
+	printf("ETHER %d: Finishing...\n", a->id);
+	printf("ETHER %d: Finished Processing.\n", a->id);
+  
+  
 ## Motivation
 
 **POC** to addess **interleaving of RT Event signaling with Multithread concurrency**
