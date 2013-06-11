@@ -11,8 +11,8 @@ and after processing data (sending messages to an echo server down the line)
 every TRUNK posts back results to the ETHER's input FIFO
 At this moment a RT signal is raised and the handling function traces the
 RT-event and its associated value to a file for further exploitation.
-The major part of the files belong to a codeblocks projec that serves the purposes of POCs. except for a couple of files, that are targeted for SO Windows, these are cross platform examples.
 **Standard POSIX pthread** libraries are also used regarding thread POCs.
+The project could be a cross platform example provided we have the posix pthread porting.
 
 
 ## Code Example
