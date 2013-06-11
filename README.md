@@ -12,7 +12,7 @@ every TRUNK posts back results to the ETHER's input FIFO
 At this moment a RT signal is raised and the handling function traces the
 RT-event and its associated value to a file for further exploitation.
 **Standard POSIX pthread** libraries are also used regarding thread POCs.
-The project could be a cross platform example provided we have the posix pthread porting.
+
 
 
 ## Code Example
