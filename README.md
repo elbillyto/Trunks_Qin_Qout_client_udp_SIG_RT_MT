@@ -17,7 +17,7 @@ RT-event and its associated value to a file for further exploitation.
 
 ## Code Example
 
-
+```c
 	printf("--> runETHER %d\n", a->id);
 
 	for (o = 0; o < a->lock->Capacity; o++) {
@@ -50,7 +50,7 @@ RT-event and its associated value to a file for further exploitation.
 	//ETHER has consumed the entire input, Notify
 	printf("ETHER %d: Finishing...\n", a->id);
 	printf("ETHER %d: Finished Processing.\n", a->id);
-  
+```  
   
 ## Motivation
 
