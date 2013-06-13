@@ -32,7 +32,6 @@ RT-event and its associated value to a file for further exploitation.
 	}
 
 	//ETHER has generated the entire output, Notify
-	printf("ETHER %d: Finishing generation...\n", a->id);
 	printf("ETHER %d: Finished generation.\n", a->id);
 
 	//reads qIN until Capacity to process results from TRUNKS
